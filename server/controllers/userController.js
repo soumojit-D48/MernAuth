@@ -2,27 +2,24 @@ import userModel from "../models/userModel.js";
 
 const getUserData = async (req, res) => {
     try {
-        const {userId} = req.body // userId came via injecting the middleware
+        const user = req.user; 
 
-        const user = await userModel.findById(userId)
-
-        if(!user){
-            return res.json({success: false, message:"User not found"})
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
         }
 
-        res.json({
+        res.status(200).json({
             success: true,
             userData: {
                 name: user.name,
                 isAccountVerified: user.isAccountVerified
             }
-        })
+        });
 
     } catch (error) {
-        
+        console.error("Error in getUserData:", error);
+        res.status(500).json({ success: false, message: error.message }); 
     }
 }
 
-export {
-    getUserData,
-}
+export { getUserData };
