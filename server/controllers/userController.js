@@ -5,7 +5,7 @@ const getUserData = async (req, res) => {
         const user = req.user; 
 
         if (!user) {
-            return res.status(404).json({ success: false, message: "User not found" });
+            return res.json({ success: false, message: "User not found" });
         }
 
         res.status(200).json({

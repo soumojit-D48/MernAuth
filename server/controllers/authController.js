@@ -63,7 +63,7 @@ const login = async (req, res) => {
     const { email, password } = req.body
 
     if (!email || !password) {
-        res.status(400).json({ success: false, message: 'Email and password are required' })
+        return res.status(400).json({ success: false, message: 'Email and password are required' })
     }
 
     try {
@@ -112,7 +112,7 @@ const logout = async (req, res) => {
             sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict'
         })
 
-        return res.status().json({ success: true, message: "Logged Out" })
+        return res.status(200).json({ success: true, message: "Logged Out" })
     } catch (error) {
         res.status(500).json({ success: false, message: error.message })
 

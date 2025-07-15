@@ -14,7 +14,11 @@ const allowedOrigins = ['http://localhost:5173']
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin: allowedOrigins,credentials: true}))
+// app.use(cors({origin: allowedOrigins,credentials: true}))
+app.use(cors({
+  origin: 'http://localhost:5173', // or your frontend domain on vercel
+  credentials: true
+}))
 
 // API Endpointes
 app.get('/', (req, res) => res.send("Api working fine"))
