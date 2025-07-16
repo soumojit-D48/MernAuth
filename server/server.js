@@ -10,7 +10,10 @@ const app = express()
 const port = process.env.PORT || 4000
 connectDB()
 
-const allowedOrigins = ['https://mernauth-frontend-bkwh.onrender.com']
+const allowedOrigins = [
+  'http://localhost:5173', // for local development
+  'https://mernauth-frontend-bkwh.onrender.com' // deployed frontend on Render
+];
 
 app.use(express.json())
 app.use(cookieParser())
