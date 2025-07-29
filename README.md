@@ -81,19 +81,18 @@ Custom middleware (userAuth) to protect routes using token in cookies
 
 ## 🔄 API Routes
 
-Auth
-POST   /api/auth/register           → Register a new user
-POST   /api/auth/login              → Login existing user
-POST   /api/auth/logout             → Logout the current user
-POST   /api/auth/send-verify-otp    → Send email verification OTP
-POST   /api/auth/verify-account     → Verify user email using OTP
-GET    /api/auth/is-auth            → Check if user is authenticated
-POST   /api/auth/send-reset-otp     → Send password reset OTP to email
-POST   /api/auth/reset-password     → Reset password using OTP
+# Auth
+- POST   /api/auth/register           → Register a new user
+- POST   /api/auth/login              → Login existing user
+- POST   /api/auth/logout             → Logout the current user
+- POST   /api/auth/send-verify-otp    → Send email verification OTP
+- POST   /api/auth/verify-account     → Verify user email using OTP
+- GET    /api/auth/is-auth            → Check if user is authenticated
+- POST   /api/auth/send-reset-otp     → Send password reset OTP to email
+- POST   /api/auth/reset-password     → Reset password using OTP
 
-
-User
-GET    /api/user/data               → Fetch authenticated user's data
+# User
+- GET    /api/user/data               → Fetch authenticated user's data
 
 
 ## 🧠 Learning Outcomes
