@@ -79,9 +79,9 @@ After verifying OTP, user can reset password
 4. 🛡️ Protected Routes
 Custom middleware (userAuth) to protect routes using token in cookies
 
-## 🔄 API Routes
+# 🔄 API Routes
 
-# Auth
+### Auth
 - POST   /api/auth/register           → Register a new user
 - POST   /api/auth/login              → Login existing user
 - POST   /api/auth/logout             → Logout the current user
@@ -91,7 +91,7 @@ Custom middleware (userAuth) to protect routes using token in cookies
 - POST   /api/auth/send-reset-otp     → Send password reset OTP to email
 - POST   /api/auth/reset-password     → Reset password using OTP
 
-# User
+### User
 - GET    /api/user/data               → Fetch authenticated user's data
 
 
