@@ -80,20 +80,21 @@ After verifying OTP, user can reset password
 Custom middleware (userAuth) to protect routes using token in cookies
 
 ## 🔄 API Routes
+
 Auth
-Route	Method	Description
-/api/auth/register	POST	Register new user
-/api/auth/login	POST	Login user
-/api/auth/logout	POST	Logout user
-/api/auth/send-verify-otp	POST	Send email verification OTP
-/api/auth/verify-account	POST	Verify user email using OTP
-/api/auth/is-auth	GET	Check if user is authenticated
-/api/auth/send-reset-otp	POST	Send reset OTP to email
-/api/auth/reset-password	POST	Reset password using OTP
+POST   /api/auth/register           → Register a new user
+POST   /api/auth/login              → Login existing user
+POST   /api/auth/logout             → Logout the current user
+POST   /api/auth/send-verify-otp    → Send email verification OTP
+POST   /api/auth/verify-account     → Verify user email using OTP
+GET    /api/auth/is-auth            → Check if user is authenticated
+POST   /api/auth/send-reset-otp     → Send password reset OTP to email
+POST   /api/auth/reset-password     → Reset password using OTP
+
 
 User
-Route	Method	Description
-/api/user/data	GET	Get authenticated user's data
+GET    /api/user/data               → Fetch authenticated user's data
+
 
 ## 🧠 Learning Outcomes
 Full-stack authentication using JWT and cookies
